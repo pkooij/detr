@@ -13,7 +13,7 @@ import numpy as np
 import IPython
 e = IPython.embed
 
-STATE_DIM = 7  # TODO hardcoded
+STATE_DIM = 6  # TODO hardcoded
 
 def reparametrize(mu, logvar):
     std = logvar.div(2).exp()
