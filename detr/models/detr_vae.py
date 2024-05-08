@@ -57,7 +57,7 @@ class DETRVAE(nn.Module):
         if backbones is not None:
             self.input_proj = nn.Conv2d(backbones[0].num_channels, hidden_dim, kernel_size=1)
             self.backbones = nn.ModuleList(backbones)
-           self.input_proj_robot_state = nn.Linear(self.state_dim, hidden_dim)
+            self.input_proj_robot_state = nn.Linear(self.state_dim, hidden_dim)
         else:
             # input_dim = 14 + 7 # robot_state + env_state
             self.input_proj_robot_state = nn.Linear(self.state_dim, hidden_dim)
